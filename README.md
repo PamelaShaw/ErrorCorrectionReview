@@ -1,2 +1,5 @@
 # ErrorCorrectionReview
-This paper reviews statistical methods to adjust  analyses for covariate and outcome measurement error
+This paper reviews statistical methods to adjust analyses for covariate and outcome measurement error. This directory contains code to analyze data which contains errors in the outcome and multiple covariates with 4 possible error correction methods, each of which relies on there being gold standard error-free data on a subset. This is an examle of a two-phase dataset structure, where phase 1 data contains the errorprone data available on everyone and the phase 2 data contains gold standard (error-free) data on a subset. The provided synthetic-mother-child-data-2025-03-18.csv file contains synthetic data used for each of the three R code files. In each file there is code to analyse a continuous outcome, binary outcome and survival outcome. 
+1) SIM-tutorial-analyses-MI.R implements multiple imputation (MI)
+2) SIM-tutorial-analyses-SMLE.R implements semiparametric maximum likelihood estimation (SMLE)
+3) SIM-tutorial-analyses-Naive-DesignBased.R- implements the naive esimtate that ignores the measurment error (i.e. makes no correction), Inverse-probablity weighted analysis of the complete validated data, and a generalized raking (GR) method. GR is a type of AIPW.
